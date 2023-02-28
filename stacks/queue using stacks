@@ -14,15 +14,14 @@ public:
     }
     
     int pop() {
-        if(!s2.empty())
-        {
+        if(!s2.empty())   // if s2 not empty then pop s2
             int ans = s2.top();
             s2.pop();
             return ans;
         }
         else
         {
-            while(!s1.empty())
+            while(!s1.empty())  //if s2 is empty push elements of s1 to s2 and then pop s2, till all elements of s1 are pushed to s2
             {
                 s2.push(s1.top());
                 s1.pop();
@@ -33,6 +32,7 @@ public:
         }
         
     }
+    // if s2 is not empty then return top of s2 and if s2 is empty
     
     int peek() {
         if(!s2.empty())
